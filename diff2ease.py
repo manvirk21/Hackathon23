@@ -4,10 +4,33 @@ nlp = spacy.load("en_core_web_sm")
 
 # Define a list of complex legal terms and their simpler alternatives
 term_dict = {
-    "indemnify": "protect",
-    "indemnification": "protection",
-    "confidentiality": "privacy",
-    "dispute resolution": "problem-solving",
+"indemnify": "protect",
+"indemnification": "protection",
+"confidentiality": "privacy",
+"dispute resolution": "problem-solving",
+"arbitration": "settling a dispute outside of court",
+"breach of contract": "violation of a legal agreement",
+"compensatory damages": "money awarded to make up for losses",
+"consideration": "something of value exchanged for a promise",
+"deposition": "a witness's sworn out-of-court testimony",
+"eminent domain": "the power of the government to take private property for public use",
+"equitable remedy": "a solution based on fairness rather than strict legal rules",
+"indictment": "formal accusation of a crime by a grand jury",
+"injunction": "court order prohibiting or requiring certain actions",
+"intellectual property": "creations of the mind, such as inventions or artistic works, that are protected by law",
+"lien": "a legal claim on property to secure payment of a debt",
+"negligence": "failure to exercise reasonable care, resulting in harm to others",
+"patent": "a legal right granted for an invention or discovery",
+"preemption": "the federal government's ability to overrule state laws in certain areas",
+"promissory estoppel": "a legal doctrine that enforces a promise, even if there was no formal contract",
+"quid pro quo": "something given or received in exchange for something else",
+"replevin": "a legal action to recover property that has been wrongfully taken",
+"statute of limitations": "the time limit for filing a lawsuit after an event has occurred",
+"tort": "a civil wrong, such as negligence or intentional harm, that results in harm to another person or property",
+"trade secret": "confidential business information that gives a competitive advantage",
+"vicarious liability": "a legal doctrine that holds one person responsible for the actions of another person or entity",
+"waiver": "the voluntary relinquishment of a right or claim",
+"zoning": "the regulation of land use by local governments"
     # add more terms as needed
 }
 
@@ -65,7 +88,7 @@ def simplify_sentence(sentence):
     return simplified_sentence
 
 # Example usage
-text = "The quick brown fox jumped over the lazy dog."
+text = "Despite the fact that the defendant had previously been convicted of similar crimes, the defense argued that the evidence presented in this case was insufficient to prove guilt beyond a reasonable doubt."
 sentences = sent_tokenize(text)
 simplified_sentences = []
 for sentence in sentences:
